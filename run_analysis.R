@@ -77,5 +77,6 @@ final.data <- final.data[,c(1:2, 4:7, 3)]
 
 final.data$Subject <- as.factor(final.data$Subject)
 
-final.data2 <- aggregate(value ~ Subject + Activity + MeasureType + Measurement, data = final.data, mean)
+tidy.data <- aggregate(value ~ Subject + Activity + MeasureType + Measurement, data = final.data, mean)
 
+write.table(tidy.data, "tidy.data.txt")
