@@ -112,8 +112,8 @@ final.data$Subject <- as.factor(final.data$Subject)
 final.data$Activity <- as.factor(final.data$Activity)
 
 # Finally we calculate the means of all measurement configurations
-final.data.means <- aggregate(value ~ Subject + Activity + MeasureType + Measurement, data = final.data, mean)
-names(final.data.means) <- c(names(final.data.means)[1:4], "Mean")
+tidy.data <- aggregate(value ~ Subject + Activity + MeasureType + Measurement, data = final.data, mean)
+names(tidy.data) <- c(names(tidy.data)[1:4], "Mean")
 
 # And export to tidy.dataset.txt
-write.table(final.data.means, "tidy.dataset.txt", row.names = F)
+write.table(tidy.data, "tidy.data.txt", row.names = F)
