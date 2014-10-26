@@ -42,7 +42,7 @@ Method
 
 The run_analysis.R file has almost all lines commented to maximize code understanding. Here is a summarized description of the process:
 
-1. The working directory should have the "UCI HAR Dataset". If this is not the case, the script will download the file and extract the directory
+1. The working directory should have the "UCI HAR Dataset" folder. If this is not the case, the script will download the zipped file, extract the directory and delete the zipped file
 2. Read "activity_labels.txt"
 3. Read "features.txt"
 4. Filter *features* by mean and std
