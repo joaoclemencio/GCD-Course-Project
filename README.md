@@ -24,7 +24,7 @@ The following is the project description and objectives:
 
 > Good luck!
 
-Resulting Dataset
+Codebook / Resulting Dataset
 ---
 
 The resulting dataset has the following configuration:
@@ -47,7 +47,7 @@ The run_analysis.R file has almost all lines commented to maximize code understa
 3. Read "features.txt"
 4. Filter *features* by mean and std
 5. Read *test* and *train* data
-6. Filter both by the columns corresponding to means and standard deviations
+6. Filter both by the columns corresponding to *means* and *standard deviations* (only variables with *mean()* and *std()* were selected as that was my understanding of the assignment, i.e., *angle(tBodyAccMean, gravity)* for example was not included)
 7. Read and append Subject and Activity information to both *train* and *test*
 8. Merge tables and clean up column names
 9. Before the table is melted, we split the measurements by 4 categorizations: Measurement Type, measurement, Direction and Function
